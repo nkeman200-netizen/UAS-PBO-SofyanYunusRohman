@@ -17,7 +17,8 @@ class MahasiswaBidikmisi extends mahasiswa{
     }
     
     public function hitungTagihanSemester(){
-        
+        $total=0;
+        return $total;
     }
 
     public function tampilkanSpesifikasiAkademik(){

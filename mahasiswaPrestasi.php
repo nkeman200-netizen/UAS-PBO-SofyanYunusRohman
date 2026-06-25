@@ -5,9 +5,9 @@ class MahasiswaPrestasi extends mahasiswa{
     protected $namaInstansiBeasiswa;
     protected $minimalIpk;
 
-    public function __construct($id_mahasiswa,$nama_mahasiswa,$nim,$semester,$tarifUktNominal,$goolonganUkt,$minimalIpk) {
+    public function __construct($id_mahasiswa,$nama_mahasiswa,$nim,$semester,$tarifUktNominal,$golonganUkt,$minimalIpk) {
         parent::__construct($id_mahasiswa,$nama_mahasiswa,$nim,$semester,$tarifUktNominal);
-        $this->namaInstansiBeasiswa=$goolonganUkt;
+        $this->namaInstansiBeasiswa=$golonganUkt;
         $this->minimalIpk=$minimalIpk;
     }
 
@@ -17,7 +17,8 @@ class MahasiswaPrestasi extends mahasiswa{
     }
     
     public function hitungTagihanSemester(){
-
+        $total=$this->tarifUktNominal*0.25;
+        return $total;
     }
 
     public function tampilkanSpesifikasiAkademik(){

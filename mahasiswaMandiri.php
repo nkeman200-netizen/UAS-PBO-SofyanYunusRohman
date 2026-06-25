@@ -5,9 +5,9 @@ class MahasiswaMandiri extends mahasiswa{
     protected $golonganUkt;
     protected $namaWakil;
 
-    public function __construct($id_mahasiswa,$nama_mahasiswa,$nim,$semester,$tarifUktNominal,$goolonganUkt,$namaWakil) {
+    public function __construct($id_mahasiswa,$nama_mahasiswa,$nim,$semester,$tarifUktNominal,$golonganUkt,$namaWakil) {
         parent::__construct($id_mahasiswa,$nama_mahasiswa,$nim,$semester,$tarifUktNominal);
-        $this->golonganUkt=$goolonganUkt;
+        $this->golonganUkt=$golonganUkt;
         $this->namaWakil=$namaWakil;
     }
 
@@ -17,7 +17,8 @@ class MahasiswaMandiri extends mahasiswa{
     }
 
     public function hitungTagihanSemester(){
-
+        $total=$this->tarifUktNominal+100000;
+        return $total;
     }
 
     public function tampilkanSpesifikasiAkademik(){
